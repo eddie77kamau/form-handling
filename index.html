@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Data Handling with JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+    .form-summary {
+      margin-top: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Form Data Handling Exercise</h1>
+  <form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span class="error" id="nameError"></span>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error" id="emailError"></span>
+    <br><br>
+
+    <label>Preferred Contact Method:</label>
+    <select id="contactMethod" name="contactMethod" required>
+      <option value="">--Select--</option>
+      <option value="Email">Email</option>
+      <option value="Phone">Phone</option>
+    </select>
+    <span class="error" id="contactMethodError"></span>
+    <br><br>
+
+    <label>
+      <input type="checkbox" id="terms" name="terms"> I accept terms and conditions
+    </label>
+    <span class="error" id="termsError"></span>
+    <br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="form-summary" id="formSummary">
+    <h2>Form Summary</h2>
+    <p id="summaryContent">No data submitted yet.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
